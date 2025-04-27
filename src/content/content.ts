@@ -4,7 +4,8 @@ document.addEventListener('mouseup', () => {
     if (selection) {
       chrome.runtime.sendMessage({
         type: "SHOW_CONTEXT_MENU",
-        text: selection
+        text: selection,
+        url: window.location.href
       });
     }
   });
